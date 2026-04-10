@@ -1,0 +1,162 @@
+{% extends "header_footer.html" %}
+
+{% block base %}
+
+
+{% block seo %}
+    {% if seo %}
+        <title>{{ seo.title }}</title>
+        <meta name="description" content="{{ seo.meta_description }}">
+        <meta name="keywords" content="{{ seo.keywords }}">
+        {% if seo.canonical_url %}
+        <link rel="canonical" href="{{ seo.canonical_url }}">
+        {% endif %}
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="og:description" content="{{ seo.meta_description }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    {% else %}
+        <title>Bilal Fitness - Support Us</title>
+    {% endif %}
+{% endblock %}
+
+
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Page Heading & Search -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<h1 class="text-slate-900 dark:text-slate-50 text-4xl font-black leading-tight tracking-tight">Support &amp; Legal</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">Precision Fitness Help Center and Documentation</p>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-slate-500 flex border-none bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary border-none bg-white dark:bg-slate-800 h-full placeholder:text-slate-400 px-4 pl-2 text-base font-normal" placeholder="Search FAQs, topics, and technical guides..." value=""/>
+</div>
+</label>
+</div>
+<!-- Help Center Categories -->
+<h2 class="text-slate-900 dark:text-slate-50 text-[22px] font-bold leading-tight tracking-tight px-4 pb-3 pt-8">Help Center</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 flex-col hover:border-primary transition-colors cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">person</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-slate-50 text-base font-bold">Account</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Profile, data, and security</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 flex-col hover:border-primary transition-colors cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">fitness_center</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-slate-50 text-base font-bold">Training</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Workouts and tracking</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 flex-col hover:border-primary transition-colors cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-slate-50 text-base font-bold">Billing</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Payments and plans</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 flex-col hover:border-primary transition-colors cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-slate-50 text-base font-bold">Technical</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">App issues and bugs</p>
+</div>
+</div>
+</div>
+<!-- Contact Us Section -->
+<div class="px-4 py-8">
+<div class="rounded-xl bg-slate-100 dark:bg-slate-800/50 p-8 border border-slate-200 dark:border-slate-700">
+<div class="flex flex-col md:flex-row gap-10">
+<div class="flex-1">
+<h2 class="text-slate-900 dark:text-slate-50 text-2xl font-bold mb-4">Contact Us</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Can't find what you're looking for? Our fitness experts and support team are available 24/7 to help you reach your goals.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-slate-700 dark:text-slate-300">support@precisionfitness.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-slate-700 dark:text-slate-300">+1 (555) 012-3456</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-slate-700 dark:text-slate-300">123 Performance Way, Austin, TX</span>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<form class="grid grid-cols-1 gap-4">
+<input class="rounded-lg border-slate-300 dark:border-slate-600 dark:bg-slate-900 focus:border-primary focus:ring-primary" placeholder="Full Name" type="text"/>
+<input class="rounded-lg border-slate-300 dark:border-slate-600 dark:bg-slate-900 focus:border-primary focus:ring-primary" placeholder="Email Address" type="email"/>
+<textarea class="rounded-lg border-slate-300 dark:border-slate-600 dark:bg-slate-900 focus:border-primary focus:ring-primary" placeholder="How can we help?" rows="4"></textarea>
+<button class="bg-primary text-slate-900 font-bold py-3 rounded-lg hover:opacity-90 transition-opacity" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy Policy Summary -->
+<div class="px-4 py-8 border-t border-slate-200 dark:border-slate-800">
+<h2 class="text-slate-900 dark:text-slate-50 text-2xl font-bold mb-6">Privacy Policy</h2>
+<div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-4">
+<p>At Precision Fitness, your privacy is our priority. We are committed to protecting the personal data you share with us while using our training platform and mobile applications.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2">Data Collection</h4>
+<p class="text-sm">We collect profile information and workout data to provide personalized fitness coaching and progress tracking.</p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2">Data Usage</h4>
+<p class="text-sm">Your data is used exclusively to improve your experience. We never sell your personal information to third parties.</p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2">Your Rights</h4>
+<p class="text-sm">You have the right to access, export, or delete your data at any time through your account settings.</p>
+</div>
+</div>
+<p class="text-xs pt-4 italic">Last updated: October 24, 2023. View the full Privacy Policy document <a class="text-primary underline" href="#">here</a>.</p>
+</div>
+</div>
+<!-- Terms of Service Summary -->
+<div class="px-4 py-8 border-t border-slate-200 dark:border-slate-800 mb-20">
+<h2 class="text-slate-900 dark:text-slate-50 text-2xl font-bold mb-6">Terms of Service</h2>
+<div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-4">
+<p>By using Precision Fitness, you agree to the following terms and conditions regarding your use of our services.</p>
+<ul class="list-disc pl-5 space-y-2 text-sm">
+<li><strong>Membership:</strong> Subscription fees are billed at the start of each period and are non-refundable unless required by law.</li>
+<li><strong>Health Safety:</strong> Users should consult with a physician before starting any new exercise program. You use our workouts at your own risk.</li>
+<li><strong>Acceptable Use:</strong> You agree not to misuse our services or help anyone else do so. This includes any attempt to reverse-engineer our proprietary algorithms.</li>
+<li><strong>Intellectual Property:</strong> All content, including workout videos and routines, is the exclusive property of Precision Fitness.</li>
+</ul>
+<p class="text-xs pt-4 italic">Last updated: October 24, 2023. View the full Terms of Service document <a class="text-primary underline" href="#">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{% endblock base %}
+
+

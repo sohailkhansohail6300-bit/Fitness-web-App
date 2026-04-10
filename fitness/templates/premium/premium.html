@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7bf425",
+            "background-light": "#f7f8f5",
+            "background-dark": "#172210",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <title>My Training Plan - Coach's Recommendations</title>
+</head>
+<body class="">
+    
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- main container uses padding that scales with viewport: base px-4, md:px-20, lg:px-40 -->
+      <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-4 md:py-6 lg:py-10">
+        <!-- inner max-width container ensures content doesn't stretch too wide on large screens -->
+        <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 gap-6 md:gap-8">
+         <a href="https://wa.me/971565824453" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-700 text-white rounded-full p-4 shadow-lg transition-all"><button>Whatsapp</button></a>
+          <!-- ========== HEADER SECTION ========== -->
+          <div class="flex flex-col sm:flex-row flex-wrap sm:items-center justify-between gap-3 px-20 sm:px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary/20 text-slate-900 dark:text-slate-100 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Active Plan</span>
+              </div>
+              <h1 class="text-slate-900 dark:text-slate-100 text-2xl sm:text-3xl md:text-4xl font-black">Coach's Recommendations</h1>
+              <p class="text-slate-600 dark:text-slate-400 sm:text-lg font-normal leading-normal max-w-2xl">Your personalized high-performance training and nutrition protocol for today.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-2 sm:mt-0">
+             <a href='{% url "home" %}'> <button class="flex items-center justify-center gap-2 rounded-xl bg-transparent border border-slate-200 dark:border-slate-700 px-3 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm hover:border-primary hover:text-primary transition-colors text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                <span class="material-symbols-outlined text-lg sm:text-xl">logout</span>
+                <span class="hidden xs:inline">Log Out</span>
+              </button></a>
+              <button class="flex items-center justify-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm whitespace-nowrap">
+                <span class="material-symbols-outlined text-lg sm:text-xl">calendar_today</span>
+                <span class="hidden xs:inline">Oct 24, 2023</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ========== FEATURED VIDEOS (3 cards) ========== -->
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between px-20 md:px-4">
+              <h2 class="text-slate-900 dark:text-slate-100 text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] flex items-center gap-3">
+                <span class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary text-slate-900">
+                  <span class="material-symbols-outlined text-base sm:text-lg">play_circle</span>
+                </span>
+                Featured Videos
+              </h2>
+            </div>
+            <!-- grid: 1 column on mobile, 2 on md, 3 on lg, with responsive gap -->
+            <div class="px-20 md:px-4 @container">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Barbell Back Squats Card -->
+                 {% for i in video %}
+                 
+                 
+                <div class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-shadow">
+                  <div class="relative group cursor-pointer aspect-video w-full bg-slate-200 dark:bg-slate-700 overflow-hidden flex items-center justify-center">
+                    <video  class="absolute inset-0 bg-cover bg-center opacity-90" controls>
+                      <source src="{{ i.video.url }}" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  
+                  </div>
+                  <div class="p-4 sm:p-5 flex flex-col gap-2 sm:gap-3">
+                    <div class="flex flex-col gap-1">
+                      <h3 class="text-slate-900 dark:text-slate-100 text-base sm:text-lg font-bold">Barbell Back Squats</h3>
+                      <div class="inline-flex self-start items-center px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-primary/10 text-slate-800 dark:text-slate-200 text-xs font-bold uppercase tracking-wide">
+                        4 Sets × 10 Reps
+                      </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+                     {{ i.desc }}
+                    </p>
+                  </div>
+                </div>
+                {% endfor %}
+                <!-- Conventional Deadlifts Card -->
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== EXERCISE SCHEDULE (table) ========== -->
+          <div class="flex flex-col gap-4 pt-2 md:pt-4">
+            <div class="flex items-center justify-between md:px-4">
+              <h2 class="text-slate-900 dark:text-slate-100 text-xl  sm:text-2xl font-bold leading-tight tracking-[-0.015em] flex items-center gap-20">
+                <span class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary text-slate-900">
+                  <span class="material-symbols-outlined text-base sm:text-lg">fitness_center</span>
+                </span>
+                Exercise Schedule
+              </h2>
+              <span class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest whitespace-nowrap ml-2">Day 1: Lower Body Power</span>
+            </div>
+            <div class="px-20 md:px-4 @container">
+              <div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+                <!-- table container becomes scrollable horizontally on very small screens -->
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse min-w-[600px] sm:min-w-full">
+                    <thead>
+                      <tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Exercise Name</th>
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Sets/Reps</th>
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Coach's Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                      {% for i in exercise %}
+                      
+                      
+                      <tr class="hover:bg-primary/5 transition-colors">
+                        <td class="px-4 sm:px-6 py-3 sm:py-4 font-bold text-slate-900 dark:text-slate-100 text-sm sm:text-base">{{ i.Exercise_name }}</td>
+                        <td class="px-4 sm:px-6 py-3 sm:py-4">
+                          <div class="bg-primary/10 text-slate-800 dark:text-slate-200 px-2 sm:px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide inline-block whitespace-nowrap">{{ i.sets_reps }}</div>
+                        </td>
+                        <td class="px-4 sm:px-6 py-3 sm:py-4 text-slate-600 dark:text-slate-400 text-xs sm:text-sm">{{ i.coach_notes }}</td>
+                      </tr>
+                      {% endfor %}
+                    
+                 
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== NUTRITION PLAN (table) ========== -->
+          <div class="flex flex-col gap-4 pt-2 md:pt-4">
+            <div class="flex items-center justify-between px-1 md:px-4">
+              <h2 class="text-slate-900 dark:text-slate-100 text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] flex items-center gap-20">
+                <span class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary text-slate-900">
+                  <span class="material-symbols-outlined text-base sm:text-lg">restaurant</span>
+                </span>
+                Nutrition Plan
+              </h2>
+              <div class="flex items-center gap-2">
+                <span class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest whitespace-nowrap">Daily Goal: 2,800 kcal</span>
+              </div>
+            </div>
+            <div class="px-20 md:px-4 @container">
+              <div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+                <!-- horizontal scroll on very small screens only -->
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse min-w-[580px] sm:min-w-full">
+                    <thead>
+                      <tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Meal</th>
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Food Items</th>
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Macros (P/C/F)</th>
+                        <th class="px-4 sm:px-6 py-3 sm:py-4 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-semibold uppercase tracking-wider">Timing</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                      {% for i in nutration %}
+                      <tr class="hover:bg-primary/5 transition-colors">
+                        <td class="px-4 sm:px-6 py-3 sm:py-4">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-slate-400 text-lg sm:text-xl">wb_sunny</span>
+                            <span class="text-slate-900 dark:text-slate-100 font-bold text-sm sm:text-base">{{ i.Meal }}</span>
+                          </div>
+                        </td>
+                        <td class="px-4 sm:px-6 py-3 sm:py-4 text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">
+                          {{ i.Food_items }}
+                        </td>
+                        <td class="px-4 sm:px-6 py-3 sm:py-4">
+                          <div class="bg-primary/20 text-slate-900 dark:text-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-xs font-bold font-mono text-center whitespace-nowrap">
+                            {{ i.Macros }}
+                          </div>
+                        </td>
+                        <td class="px-4 sm:px-6 py-3 sm:py-4">
+                          <div class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium">{{ i.time }}</div>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== COACH TIP ========== -->
+          <div class="px-20 md:px-4 mt-2 mb-6 md:mb-10 flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-slate-100 dark:bg-slate-800/40 rounded-xl border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl shrink-0">info</span>
+            <div>
+              <p class="text-slate-900 dark:text-slate-100 font-bold text-sm sm:text-base">Coach's Pro Tip</p>
+              <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">Remember to stay hydrated throughout the workout. Aim for at least 3 liters of water today to support muscle recovery and metabolism.</p>
+            </div>
+          </div>
+
+        </div> <!-- end layout-content-container -->
+      </div> <!-- end flex-1 justify-center padding wrapper -->
+    </div> <!-- end layout-container -->
+  </div> <!-- end relative wrapper -->
+</body>
+</html>

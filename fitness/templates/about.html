@@ -1,0 +1,146 @@
+{% extends "header_footer.html" %}
+{% load static %}
+{% block base %}
+
+
+<!-- Dynamic SEO -->
+{% block seo %}
+    {% if seo %}
+        <title>{{ seo.title }}</title>
+        <meta name="description" content="{{ seo.meta_description }}">
+        <meta name="keywords" content="{{ seo.keywords }}">
+        {% if seo.canonical_url %}
+        <link rel="canonical" href="{{ seo.canonical_url }}">
+        {% endif %}
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="og:description" content="{{ seo.meta_description }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    {% else %}
+        <title>Bilal Fitness - About Us</title>
+    {% endif %}
+{% endblock %}
+
+
+
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-6 md:px-20 lg:px-40 flex flex-1 justify-center py-12">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4 mb-8">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-slate-900 dark:text-slate-100 text-5xl font-black leading-tight tracking-[-0.033em]">
+                                Bilal <span class="text-primary">Fitness</span>
+</p>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal">
+                                Precision in every movement, excellence in every result.
+                            </p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-12">
+<section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">info</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">About Us</h2>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                Bilal Fitness is dedicated to providing data-driven training methodologies that empower individuals to reach their peak physical potential through science and community. Founded on the principle that fitness is a science, we utilize advanced biomechanical analysis and personalized nutrition planning to ensure every client achieves their specific goals with maximum efficiency and minimum injury risk.
+                            </p>
+</section>
+<section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">work</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">Careers</h2>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed mb-4">
+                                Join our team of elite fitness professionals. We are always looking for passionate individuals who are committed to changing lives through health and wellness. Whether you are a certified trainer, a nutritionist, or a business professional, we offer a dynamic environment where your expertise is valued.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary text-slate-900 text-sm font-semibold rounded-full">Personal Trainer</span>
+<span class="px-3 py-1 bg-primary/20 text-slate-900 dark:text-slate-100 text-sm font-semibold rounded-full">Nutritionist</span>
+<span class="px-3 py-1 bg-primary/20 text-slate-900 dark:text-slate-100 text-sm font-semibold rounded-full">Operations Manager</span>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">Coach Certification</h2>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                Our proprietary certification program sets the industry standard for fitness education. The Precision Fitness Coach Certification (PFCC) combines anatomical science, psychology, and performance technology. We ensure our coaches are not just motivators, but highly skilled practitioners capable of delivering elite results for athletes and lifestyle clients alike.
+                            </p>
+</section><section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">Our Elite Coaches</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100">
+<img alt="Coach Alex" class="w-full h-full object-cover" src="{% static 'image/bilal5.jpeg' %}"/>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Bilal</h3>
+<p class="text-primary text-sm font-semibold mb-2">Strength &amp; Conditioning</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Former Olympic lifting coach with over 10 years of experience in powerlifting and metabolic conditioning.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100">
+<img alt="Coach Maya" class="w-full h-full object-cover" src="{% static 'image/bilal6.jpeg' %}"/>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Bilal</h3>
+<p class="text-primary text-sm font-semibold mb-2">Yoga &amp; Mindfulness</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Specializes in restorative yoga and flow-based movement to improve mobility and mental clarity.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100">
+<img alt="Coach Marcus" class="w-full h-full object-cover" src="{% static 'image/bilal7.jpeg' %}"/>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Bilal</h3>
+<p class="text-primary text-sm font-semibold mb-2">HIIT Specialist</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Expert in high-intensity interval training and bodyweight mechanics for rapid fat loss and endurance.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">perm_media</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">Media Kit</h2>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed mb-6">
+                                Download our official brand assets, including high-resolution logos, brand guidelines, and photography. We provide resources for press inquiries, partner collaborations, and authorized marketing materials to ensure consistent brand representation across all channels.
+                            </p>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-slate-900 font-bold rounded-xl transition-colors">
+<span class="material-symbols-outlined">download</span>
+                                Download Media Assets (ZIP)
+                            </button>
+</section>
+</div>
+<div class="mt-16 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-500 dark:text-slate-500 text-sm">
+                            © 2024 Precision Fitness Inc. All rights reserved. Precision in Every Movement.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock base %}

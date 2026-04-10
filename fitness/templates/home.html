@@ -1,0 +1,307 @@
+{% extends "header_footer.html" %}
+{% block base %}
+
+<header class="hidden sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-900 text-2xl font-bold">bolt</span>
+</div>
+<h2 class="text-slate-900 text-xl font-extrabold tracking-tight">Precision Fitness</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-semibold" href="#features">Features</a>
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-semibold" href="#programs">Programs</a>
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-semibold" href="#pricing">Pricing</a>
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-semibold" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-slate-900 text-sm font-bold px-4 py-2">Login</button>
+<button class="bg-primary hover:bg-primary/90 text-slate-900 text-sm font-extrabold px-6 py-2.5 rounded-lg shadow-sm transition-all">
+                    Join Now
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-white pt-6 pb-10 lg:pt-10 lg:pb-12">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Next Generation Training
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-8">
+                        TRANSFORM YOUR LIFE WITH <span class="text-primary underline decoration-primary/30 underline-offset-8">PRECISION</span>
+</h1>
+<p class="text-lg lg:text-xl text-slate-600 leading-relaxed mb-10 max-w-lg">
+                        Science-backed workouts and data-driven nutrition tailored to your unique goals. Stop guessing, start performing.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="/contact#form"><button class="bg-primary hover:bg-primary/90 text-slate-900 px-8 py-4 rounded-xl text-lg font-extrabold shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                            Start Your Journey
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button></a>
+<a href="/#programs"><button class="bg-slate-50 hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-xl text-lg font-bold border border-slate-200 transition-all">
+                            View Programs
+                        </button></a>
+</div>
+<div class="mt-12 flex items-center gap-4 text-slate-500 text-sm">
+<div class="flex -space-x-2">
+<img alt="" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of a female fitness user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgIagM9Fl-tCSpEGdUs3a-ySDYl8Mps84RDEUeuGkaqNx8FcRpJ-dGJkFZOrhJJh0JzlazTG5dVYEULHoxjRmwu-lsHNdbMaS2NAJX4nKdtLD66NMOh3mrR6CZ60m_o8Vdzxg3-F34eINKiPx9gYf4trcPW7-BKjP4IhADy-k0N051n5uRJxzxWQYsAom-bI3A-T5udDQp2ZXf6zRNmS_JbcIFT0AslDTHalLCLcjWxgX23ElCCmHpFtzfuxE23KDpBLMkQbrH62c"/>
+<img alt="" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of a male fitness user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVBeQOiBvKca4Wip-CrAvdrOe-KSjapzj9AphGFbTH9Flw41Kfj3bbdQi9YSGpNQUjP4i42WBYBK5lHciK90dkzNHMTaereDGQv6vxA8Hc8PO9Vpd8ccfBvTm0z8jIaXGMnM0U14CzG2DkO_dA0gPTCy36HcH6ZrLdueDabo6AC0zCCuXkqoPtPGZYANtzjawnGSibdF8vbE6yF6U_LuLKW9O8R0WSZbltNizwFGmP1_33M251jbHwQgTeg66B7UOEzWUzIAaNdY"/>
+<img alt="" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of a professional athlete user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWb2ZIB3CNhWCXG4irm4qzkDYaUcwYxDN1hVAx3SCfIdI-qoUC0tdma1FU0BBygcxNi8Emzlim9L7JRQUgmVBzKOFYXOeNnbtU4Mfg_izh3O7NOM_yi3RX0MAkeNTVM8PWo4arbTaERjTGaKihE41Zs_OH6-v8KffXLz00sxYYk6m2M8c2PpC8plvPl936JohDYftkWXf-fQq0OfI4xLxX_iGrjweOVSUx255axKLEjnToypO-uVgqr_X9P1Vz7efrLgOvkroPubc"/>
+</div>
+<p><span class="text-slate-900 font-bold">10,000+</span> athletes reaching their peak</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-square">
+<img alt="Elite Training" class="w-full h-full object-cover" data-alt="Dynamic photo of a professional athlete performing a heavy deadlift in a gym" src="static/image/bilal1.jpeg"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-white/50">
+<div class="flex items-center justify-between mb-4">
+<span class="text-slate-900 font-bold text-sm">Real-time Biometrics</span>
+<span class="text-primary material-symbols-outlined">monitoring</span>
+</div>
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+<div class="mt-2 flex justify-between text-xs font-bold text-slate-500 uppercase">
+<span>Recovery</span>
+<span class="text-slate-900 italic">85% Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Section -->
+<section class="py-24 bg-slate-50" id="features">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-primary text-sm font-black uppercase tracking-widest mb-4">The Precision Edge</h2>
+<h3 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Experience a smarter way to train.</h3>
+<p class="text-slate-600 text-lg">Our data-driven approach removes the guesswork from your health and fitness journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl hover:shadow-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl font-light">fitness_center</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-4">Personalized Training</h4>
+<p class="text-slate-600 leading-relaxed mb-6">
+                            Custom workout plans that evolve with you based on your daily performance metrics and long-term goals.
+                        </p>
+<a class="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl hover:shadow-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl font-light">nutrition</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-4">Nutritional Guidance</h4>
+<p class="text-slate-600 leading-relaxed mb-6">
+                            Macro-tracking and AI-powered meal planning designed by expert nutritionists to fuel your specific output.
+                        </p>
+<a class="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl hover:shadow-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl font-light">vital_signs</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-4">Progress Tracking</h4>
+<p class="text-slate-600 leading-relaxed mb-6">
+                            Real-time analytics and biometric syncing with wearable devices to monitor every heartbeat and recovery phase.
+                        </p>
+<a class="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Programs Section -->
+<section class="py-24 bg-white" id="programs">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-primary text-sm font-black uppercase tracking-widest mb-4">Specialized Coaching</h2>
+<h3 class="text-4xl font-extrabold text-slate-900 tracking-tight">ELITE PROGRAMS</h3>
+</div>
+<a href="{% url 'programs' %}"><button class="text-slate-900 font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                        View all programs
+                    </button></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- HIIT -->
+<div class="group relative rounded-3xl overflow-hidden aspect-[3/4]">
+<img alt="HIIT Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An athlete doing high intensity interval training (HIIT) with battle ropes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rQtBwH5xphcYRLUA5kKZ-hRkfUzgWkOnyzEwlmbsuY3U9Pngwnno9n5arKLjKN57oEZn2x60exUGyJhhp2M8IqLPT92Q5OB3XcP7U_xt178qScivIO8OxVCIe2mGfWlWBCUulYzoKrvcw9wnZ_vSTvGdpr1gAVpGD4B9FGJSYCGgWNQPS5wqfBCqKPtn-RnUhXKch6BOx-CkeBL1_RLZ3gE8ozHTAu6x4axO2ikjT6p3vm3g8w4O4cflqEXUvvnkzzqkrJFKJ3E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="bg-primary/20 backdrop-blur-sm text-primary text-xs font-black px-3 py-1 rounded-full uppercase mb-3 inline-block">Cardio &amp; Power</span>
+<h4 class="text-2xl font-black text-white mb-2 tracking-tight">HIIT REVOLUTION</h4>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">High-intensity interval training designed to burn fat and increase metabolic capacity.</p>
+<a href="{% url 'programs' %}"><button class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold px-4 py-2 rounded-lg text-sm hover:bg-white hover:text-slate-900 transition-all">Explore HIIT</button></a>
+</div>
+</div>
+<!-- Strength -->
+<div class="group relative rounded-3xl overflow-hidden aspect-[3/4]">
+<img alt="Strength Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Muscular person preparing for heavy lift in a gritty warehouse gym environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC75cRHyvauB-NcMJiKBoVx2wyQWtISUs69LjI_VVRZ-CGVzPbaworegUDTXz-M2ww4Ln4pmabAxv3KxlsNaUk9dzib_bv5iRBrNo8pASk7WIgAQL2P2MxjENUr-Yotk7IkqvHHU1VTjrIrYTUqxPjySqy0Y6AvJMKsXfa6XxMF6qKed2hW0jiePMFR5dCHTQ-mZCIfT3ftveGorW38_DH3sQH1uxdfVsTiVMHn6A0lTDXlHDdpCGfPQLA5TvgsGKAsMuwERBesEgk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="bg-primary/20 backdrop-blur-sm text-primary text-xs font-black px-3 py-1 rounded-full uppercase mb-3 inline-block">Muscle &amp; Strength</span>
+<h4 class="text-2xl font-black text-white mb-2 tracking-tight">PURE STRENGTH</h4>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">Scientific hypertrophy and strength protocols for serious physical transformation.</p>
+<a href="{% url 'programs' %}"><button class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold px-4 py-2 rounded-lg text-sm hover:bg-white hover:text-slate-900 transition-all">Explore Strength</button></a>
+</div>
+</div>
+<!-- Yoga -->
+<div class="group relative rounded-3xl overflow-hidden aspect-[3/4]">
+<img alt="Yoga Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Calm yoga studio setting with a person in a difficult balancing pose" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMUUyregnWUzF4upWil8oA2lVAijDSCcubX4W6EHN1h8Jzw_bnKVgJJq9pCyt3iKkR93GmdO8EZgZgKLmmsgmSq8zeXX4Tijz8cSBbqo_JnOedXz1GxOkq64AITuATpFCPcQI823UguE810AXHxDtnerl75aGGku-JdROl356rFuqqzEbZ58o-FCYh6728DjzwINnUJik-MqExQPP4F2K7gatbEAHJ9dQklL6T2StecPgawL_jmdSCBXoKz5oFdBeoI4TeApjs1fc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="bg-primary/20 backdrop-blur-sm text-primary text-xs font-black px-3 py-1 rounded-full uppercase mb-3 inline-block">Mind &amp; Mobility</span>
+<h4 class="text-2xl font-black text-white mb-2 tracking-tight">PRECISION FLOW</h4>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">Enhance mobility, reduce injury risk, and find mental clarity through expert yoga.</p>
+<a href="{% url 'programs' %}"><button class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold px-4 py-2 rounded-lg text-sm hover:bg-white hover:text-slate-900 transition-all">Explore Yoga</button></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-slate-50" id="pricing">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-primary text-sm font-black uppercase tracking-widest mb-4">Pricing Plans</h2>
+<h3 class="text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">CHOOSE YOUR TIER</h3>
+<p class="text-slate-600 text-lg">Select the plan that fits your ambition. No hidden fees, cancel anytime.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- Plan 1 -->
+<div class="bg-white p-10 rounded-3xl border border-slate-200 flex flex-col">
+<h4 class="text-xl font-bold text-slate-900 mb-2">Starter</h4>
+<p class="text-slate-500 text-sm mb-8">Kickstart your journey</p>
+<div class="mb-8">
+<span class="text-5xl font-black text-slate-900">$29</span>
+<span class="text-slate-400 font-medium">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Access to All Workouts
+                            </li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Digital Tracking Log
+                            </li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Community Discord Access
+                            </li>
+</ul>
+<a href="/contact#form"><button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-900 font-bold py-4 rounded-xl transition-all border border-slate-200">
+                            Get Started
+                        </button></a>
+</div>
+<!-- Plan 2 (Highlighted) -->
+<div class="bg-slate-900 p-10 rounded-3xl border-4 border-primary relative flex flex-col shadow-2xl scale-105 z-10">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-slate-900 px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/40">
+                            Most Popular
+                        </div>
+<h4 class="text-xl font-bold text-white mb-2">Pro Performance</h4>
+<p class="text-slate-400 text-sm mb-8">For serious athletes</p>
+<div class="mb-8">
+<span class="text-5xl font-black text-white">$79</span>
+<span class="text-slate-500 font-medium">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Everything in Starter
+                            </li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Biometric Device Sync
+                            </li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                AI Nutrition Planner
+                            </li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Monthly Form Review
+                            </li>
+</ul>
+<a href="/contact#form"><button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-black py-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                            Start Free Trial
+                        </button></a>
+</div>
+<!-- Plan 3 -->
+<div class="bg-white p-10 rounded-3xl border border-slate-200 flex flex-col">
+<h4 class="text-xl font-bold text-slate-900 mb-2">Elite Coaching</h4>
+<p class="text-slate-500 text-sm mb-8">Personalized 1-on-1 focus</p>
+<div class="mb-8">
+<span class="text-5xl font-black text-slate-900">$199</span>
+<span class="text-slate-400 font-medium">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Everything in Pro
+                            </li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Weekly 1-on-1 Calls
+                            </li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Daily Coach Messaging
+                            </li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Personalized Supplement Stack
+                            </li>
+</ul>
+<a href="/contact#form"><button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-900 font-bold py-4 rounded-xl transition-all border border-slate-200">
+                            Contact Sales
+                        </button></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-24 bg-white px-6">
+<div class="max-w-5xl mx-auto bg-slate-900 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden text-center">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+<h2 class="text-3xl lg:text-5xl font-black text-white mb-6 relative z-10 tracking-tight">READY TO REACH YOUR PEAK?</h2>
+<p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto relative z-10">
+                    Join our newsletter for weekly training insights, science-backed nutrition tips, and exclusive offers.
+                </p>
+<form class="max-w-md mx-auto relative z-10 flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-white/10 border-white/20 text-white placeholder:text-slate-500 rounded-xl px-6 py-4 focus:ring-primary focus:border-primary transition-all" placeholder="Enter your email" type="email"/>
+<button class="bg-primary hover:bg-primary/90 text-slate-900 font-black px-8 py-4 rounded-xl transition-all whitespace-nowrap" type="submit">
+                        Subscribe Now
+                    </button>
+</form>
+<p class="text-slate-600 text-xs mt-6">By subscribing, you agree to our Terms and Privacy Policy.</p>
+</div>
+</section>
+</main>
+
+
+{% endblock base %}

@@ -1,0 +1,176 @@
+{% extends "header_footer.html" %}
+{% block base %}
+
+
+{% block seo %}
+    {% if seo %}
+        <title>{{ seo.title }}</title>
+        <meta name="description" content="{{ seo.meta_description }}">
+        <meta name="keywords" content="{{ seo.keywords }}">
+        {% if seo.canonical_url %}
+        <link rel="canonical" href="{{ seo.canonical_url }}">
+        {% endif %}
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="og:description" content="{{ seo.meta_description }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    {% else %}
+        <title>Bilal Fitness - Programs</title>
+    {% endif %}
+{% endblock %}
+
+
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+
+<!-- Main Content Container -->
+<main class="flex flex-1 flex-col items-center py-10 px-6 lg:px-40">
+<div class="w-full max-w-[1200px]">
+<!-- Header Section -->
+<div class="flex flex-wrap justify-between items-end gap-6 mb-10">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 text-4xl lg:text-5xl font-black leading-tight tracking-tight">Training Programs</h1>
+<p class="text-slate-600 text-lg max-w-2xl">Expertly designed workouts to help you reach your peak performance. Choose a program that fits your goals and current level.</p>
+</div>
+
+</div>
+<!-- Category Tabs -->
+<div class="mb-10 overflow-x-auto">
+<div class="flex border-b border-slate-200 min-w-max gap-8">
+<button class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 pb-4 pt-2 px-2 group">
+<span class="text-sm font-bold">All Programs</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 pb-4 pt-2 px-2 hover:text-primary">
+<span class="text-sm font-bold">Strength</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 pb-4 pt-2 px-2 hover:text-primary">
+<span class="text-sm font-bold">Cardio</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 pb-4 pt-2 px-2 hover:text-primary">
+<span class="text-sm font-bold">Mobility</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 pb-4 pt-2 px-2 hover:text-primary">
+<span class="text-sm font-bold">Performance</span>
+</button>
+</div>
+</div>
+<!-- Programs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+<!-- 1. Strength Training -->
+<div class="flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/10 z-10"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Person lifting heavy weights in a gym" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfB0yo-tkPZuJkYxHfHmB6A6IYTzimnSO1VybeVXRk7kjItIsYkM2JzNZSn8yBzMzHGC-Um2pm4kpe3f_7OJl8xSaHL84gc5tPtkjyzglpAKd2wHgE-zsGNIF9iyvYqwqtmpkk7VJIsZVufYIp75bAjLeN0sR-lonFvwg7uiNFvZiuSkufP8yj_WDA5lFJScUo6GZsg8XPpy0Zk_95u04BRNMvFmN-H8HJZhvVUYo5bpqgj_YJw3N0giIYsXlFsVrTSN5tnZ6MOlo");'></div>
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">Advanced</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-slate-900 text-2xl font-bold">Strength Training</h3>
+<span class="text-primary material-symbols-outlined">fitness_center</span>
+</div>
+<p class="text-slate-600 text-base mb-6 leading-relaxed">Build muscle and increase power with progressive overload. This 12-week intensive program focuses on compound movements and hypertrophy.</p>
+<div class="flex items-center gap-4 mb-8 text-slate-500 text-sm font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>12 Weeks</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>60m / session</span>
+</div>
+</div>
+
+</div>
+</div>
+<!-- 2. HIIT Protocols -->
+<div class="flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/10 z-10"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Athlete performing high intensity interval sprints" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMdabZGwECA0HGa9QAEq9Z8MOMIokT0BMwqPQiNfG-shH7ihfK26h8v9Af08qxSvggRU6nCgFPeHF-qMitYrTLWugiULI6qfWo2dcnhfgyiS5MtD2hT02wYt8YmY_C2k7q_WG_w33nN5zAcuAsTSUOQGPiV6v7uekuUsnoL6zPGcFCzoXD_K2GTa1TxQVgr663xQNqTXcR2MhUzb_Yew36LNS7vjU4rnXMt2bunWZ-hGEMPICTsVQdldawa3Et4kvQfscFoWEXeuI");'></div>
+<div class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">Intermediate</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-slate-900 text-2xl font-bold">HIIT Protocols</h3>
+<span class="text-primary material-symbols-outlined">bolt</span>
+</div>
+<p class="text-slate-600 text-base mb-6 leading-relaxed">High-intensity intervals designed for maximum caloric burn and cardiovascular health. Fast-paced, effective, and results-driven sessions.</p>
+<div class="flex items-center gap-4 mb-8 text-slate-500 text-sm font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>6 Weeks</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>30m / session</span>
+</div>
+</div>
+
+</div>
+</div>
+<!-- 3. Mobility & Yoga -->
+<div class="flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/10 z-10"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Person practicing yoga in a bright studio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBn8zI9O0J29R4dnNx_3MhxqPPeVkQNfb1wJvzcpORAmoWC7zNxeSHo6s21_Iyp5LvE1MWBvqaXUI8gWeeazAe5JqdlhLwD-eXrZFb4nqb7RGUxgkXONh1A0Xfa98vX3NjvymQfFFKIlHJMQK5U6pRjYMdLqOtdEsRq_atjN_zufwU9ZzyHjkSbU3n3eC07ECdtQilnEY2wY24qbNgkwps5VkZOG9IpRdn0hqdrgICMHnJmbg2-DP5poOfh_kgXcN-W8YOBrW6vU40");'></div>
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">All Levels</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-slate-900 text-2xl font-bold">Mobility &amp; Yoga</h3>
+<span class="text-primary material-symbols-outlined">self_improvement</span>
+</div>
+<p class="text-slate-600 text-base mb-6 leading-relaxed">Improve flexibility and recover faster with guided flows. Focus on joint health, core stability, and mindfulness for long-term athletic durability.</p>
+<div class="flex items-center gap-4 mb-8 text-slate-500 text-sm font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>Ongoing</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>45m / session</span>
+</div>
+</div>
+
+</div>
+</div>
+<!-- 4. Elite Performance -->
+<div class="flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/10 z-10"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional athlete training for competition" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBur6hYAQvaZ7f3GW9iNJi3HYDqMYUQq7vy2uFby3ypAsdyb1dVl4RBhDq-8srlTAMN1Cm7wbs8MD9clwn2AixBVu3uEJa3frfoDj-3sm6IF99KtZ-nbVA3yZAsC83qpRLgrOOFUSuXMrpfOyc1-Zt7XeXo-0y3ZE65SGU9GD2uN2JIPGHnpAwB4NUkAmpj-_uzxE6QZJz4Lo01hPWldUuRlc3CjBjiHwxWVjHPNw0vBlCqhZoSZphEE2RQDR1GvYc32MQf36-MVe8");'></div>
+<div class="absolute top-4 left-4 z-20 bg-slate-900 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">Pro</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-slate-900 text-2xl font-bold">Elite Performance</h3>
+<span class="text-primary material-symbols-outlined">military_tech</span>
+</div>
+<p class="text-slate-600 text-base mb-6 leading-relaxed">Advanced athletic conditioning for peak competitive form. Science-based periodization for power, speed, and endurance optimization.</p>
+<div class="flex items-center gap-4 mb-8 text-slate-500 text-sm font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>8 Weeks</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>90m / session</span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Additional Help/CTA -->
+
+</div>
+</main>
+<!-- Footer -->
+
+</div>
+</div>
+
+
+
+{% endblock base %}
