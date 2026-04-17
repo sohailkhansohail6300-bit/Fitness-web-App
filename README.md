@@ -88,8 +88,11 @@ The application includes user authentication using Django.
 - If user is already logged in → redirects automatically
 
 ---
-### live on
-FitnessPrograms12.pythonanywhere.com
+## Live Demo
+
+[Visit Live Site](https://fitnessprograms12.pythonanywhere.com)
+
+
 ## How It Works
 
 ### SEO Loading
