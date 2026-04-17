@@ -88,7 +88,8 @@ The application includes user authentication using Django.
 - If user is already logged in → redirects automatically
 
 ---
-
+### live on
+FitnessPrograms12.pythonanywhere.com
 ## How It Works
 
 ### SEO Loading
@@ -97,12 +98,11 @@ Each page loads SEO like this:
 SEO.objects.filter(page_name='home').first()
 Build A fitness Web App
 
-### to clone?
+to clone?
 git clone https://github.com/your-username/fitness-web-app.git
 pip install django
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
 
-### live on
-FitnessPrograms12.pythonanywhere.com
+
