@@ -103,3 +103,6 @@ pip install django
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
+
+### live on
+FitnessPrograms12.pythonanywhere.com
